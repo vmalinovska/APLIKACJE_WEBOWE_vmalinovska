@@ -1,5 +1,6 @@
+/* do setup'u */
 html {
-    background-color: #DDBEAA;
+    background-color: #ffffff;
     height: 100vh;
 }
 body {
@@ -11,4 +12,95 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* do index'u */
+.winered {
+    color: #932f33;
+}
+
+.lightgreen {
+    color: #5ec35e;
+}
+
+.jellyfishblue {
+    color: #5b71a4;
+}
+
+/* do cw2 */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 10px auto;
+}
+
+td, th {
+    border: 1px solid #be4bea;
+    padding: 10px;
+    text-align: center;
+}
+
+.kosha {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* do cw3 */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.pink {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: #f387dd;
+    width: 100px;
+    height: 100px;
+}
+
+.green {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: #90ee90;
+    width: 100px;
+    height: 100px;
+}
+
+.blue {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: #5b71a4;
+    width: 100px;
+    height: 100px;
+}
+
+.kosha_div {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.orange {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 100px;
+    height: 100px;
+    background-color: #ec754a;
+}
+
+
+.pastelyellow {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background-color: #f4f4ad;
+    width: 100px;
+    height: 100px;
 }
