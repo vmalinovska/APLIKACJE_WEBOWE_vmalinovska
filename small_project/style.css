@@ -1,0 +1,229 @@
+/* daję to tu by przeglądarka nie psuła wyglądu strony domyślnymi marginesami i odstepami */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* to są nazwy kolorów by nie trzeba było szukać po całym style.css miejsca w którym chcę zmienić kolor */
+:root {
+    --blue: #4e70ca;
+    --dark-gray: #222;
+    --light-gray: #dadada;
+}
+
+body { /* difoltowe */
+    font-family: sans-serif;
+    color: black;
+    background-color: #1f2023;
+}
+
+.navbar {
+    position: fixed;
+    width: 90%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 0.5rem 5rem;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.1rem, 12vw, 12.1rem);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none; /* aby nie bylo underline bo nie podoba mi sie */
+    font-family: sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    transition: 0.3s; /* wtedy ladnie zmienia kolor */
+}
+
+.navbar a:hover {
+    color: var(--blue); /* zmienia kolor */
+}
+
+.very-beginning {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10vw;
+    background-image: url('media/blue-dots.JPG');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.very-beginning::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.very-beginning-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.blue-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(5rem, 50vw, 55rem);
+    color: transparent;
+    background-image: url('media/blue-dots.JPG');
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    white-space: nowrap;
+}
+
+.three-photos-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--light-gray);
+}
+
+.three-photos-section h1 {
+    text-align: center;
+    color: var(--dark-gray);
+    font-family: "Times New Roman", sans-serif;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+.three-photos {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--light-gray);
+    padding: 2rem;
+}
+
+.three-photos-item {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-wrapper {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--blue); /* jesli sie nie zaladuje zdjecie */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.item-title {
+    font-family: 'Times New Roman', sans-serif;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+}
+
+.item-text {
+    font-family: 'Times New Roman', sans-serif;
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: justify;
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 2em;
+    gap: 2em;
+    overflow: hidden;
+    background-color: var(--dark-gray);
+}
+
+.info::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background: url('media/blue-moon.JPG') center/cover no-repeat;
+    filter: blur(3px);
+    z-index: 0;
+}
+
+.info::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.info h2 {
+    font-family: 'Times New Roman', sans-serif;
+    text-align: right;
+    font-size: 3rem;
+    margin-left: 2rem;
+    color: var(--light-gray);
+    z-index: 2;
+}
+
+.info p {
+    font-family: 'Times New Roman', sans-serif;
+    text-align: justify;
+    color: var(--light-gray);
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    z-index: 2;
+}
+
+.info img {
+    max-width: 400px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.info div {
+    max-width: 500px;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+footer {
+    background-color: rgba(0,0,0,0.6);
+    color: var(--light-gray);
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    padding: 1em;
+}
