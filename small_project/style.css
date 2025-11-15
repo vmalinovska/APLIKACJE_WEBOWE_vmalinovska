@@ -24,7 +24,7 @@
     border: 1px solid white;
     border-radius: 20px;
     box-shadow: 0 0 2px var(--dark-gray);
-    padding: 0.5rem clamp(1rem,4vw,5rem);
+    padding: 0.5rem 0;
     z-index: 3;
     display: flex;
     justify-content: space-around;
